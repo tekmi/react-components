@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  drucontainers:
+    container_name: drucontainers
+    build: .docker/drucontainers/
+    volumes:
+      - ./:/var/www
+    ports:
+      - 8200:8000

@@ -1,0 +1,36 @@
+{
+  "name": "@tekmi/react-components",
+  "version": "0.1.0",
+  "description": "Test project for sharing React Components",
+  "author": "Adam Gegotek <a.gegotek@tekmi.nl>",
+  "repository": "tekmi",
+  "license": "MIT",
+  "main": "dist/index.component.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "peerDependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "lint": "echo lint",
+    "test": "echo test",
+    "prepublish": "yarn run lint && yarn run test && rm -rf ./dist && yarn run build",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development"
+  }
+}
