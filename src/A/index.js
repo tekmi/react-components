@@ -1,7 +1,5 @@
 import React from 'react';
 
-const A = (props) => (
+export const A = (props) => (
     <a>{props.children}</a>
 );
-
-export default A;
