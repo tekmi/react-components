@@ -33,8 +33,27 @@ module.exports = (env, argv) => {
                             options: {minimize: true}
                         }
                     ]
+                },
+                {
+                    test: /\.s?[ca]ss$/,
+                    use: [
+                        {
+                            loader: "style-loader" // creates style nodes from JS strings
+                        },
+                        {
+                            loader: "css-loader" // translates CSS into CommonJS
+                        },
+                        {
+                            loader: "sass-loader" // compiles Sass to CSS
+                        }
+                    ]
                 }
             ]
+        },
+        resolve: {
+            alias: {
+                '_variables.sass': path.resolve(__dirname, './node_modules/react-bulma-components/lib/components/_variables.sass')
+            }
         },
         devtool: "source-map",
         devServer: {
